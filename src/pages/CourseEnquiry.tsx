@@ -94,7 +94,9 @@ const CourseEnquiry = () => {
 
   useEffect(() => {
     // Initialize EmailJS (you'll need to replace these with your actual EmailJS credentials)
-    emailjs.init("YOUR_PUBLIC_KEY") // Replace with your EmailJS public key
+    emailjs.init("uF0P18fJQrHSdf2CL") // Replace with your EmailJS public key
+    // Scroll to top when component mounts
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
   const onSubmit = async (data: FormData) => {
@@ -111,13 +113,14 @@ const CourseEnquiry = () => {
         student_phone: data.phone,
         student_qualification: data.qualification,
         student_city: data.city,
+        name: 'Sai Teja',
         message: `New course enquiry for ${course?.title}`,
       }
 
       // Send email using EmailJS
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_uwekkdn', // Replace with your EmailJS service ID
+        'template_286u2ln', // Replace with your EmailJS template ID
         templateParams
       )
 
