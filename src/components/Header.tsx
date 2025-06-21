@@ -61,7 +61,7 @@ const Header = () => {
               <GraduationCap className="h-8 w-8 text-white" />
             </motion.div>
             <span className="text-2xl font-bold text-primary-800">
-              EduAcademy
+              Joy's IQ Tech Courses
             </span>
           </Link>
 
